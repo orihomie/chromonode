@@ -11,4 +11,5 @@ RUN apt-get update
     && apt-get install -y tar bzip2 htop curl iputils-ping git \
     && rm -rf /var/lib/apt/lists/* \
     && apt-get purge --auto-remove -y curl \
-    && rm -rf /src/*.deb
+    && rm -rf /src/*.deb \
+    && yarn global add allure-commandline
