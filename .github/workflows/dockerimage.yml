@@ -18,7 +18,7 @@ jobs:
 #         if: startsWith(github.ref, 'refs/tags')
         uses: docker/build-push-action@v1
         with:
-          registry: hub.docker.com
+#           registry: hub.docker.com
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
           repository: 0p3xh7/chromonode
