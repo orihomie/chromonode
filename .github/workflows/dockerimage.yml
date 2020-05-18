@@ -8,11 +8,18 @@ on:
 
 jobs:
 
-  build:
+  publish:
 
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag 0p3xh7/chromonode:$(date +%s)
+      - name: Docker build and push 
+        if: startsWith(github.ref, 'refs/tags')
+        uses: docker/build-push-action@v1
+        with:
+          registry: hub.docker.com
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+          repository: 0p3xh7/chromonode
+          tag_with_ref: true
+          tags: latest
