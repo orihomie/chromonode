@@ -57,7 +57,7 @@ RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key
     ln -s /usr/bin/google-chrome /usr/bin/chromium-browser
 
 #
-# FIREFOX - Stable v76
+# FIREFOX - Stable v76 ...
 #
 RUN rm -rf /var/lib/apt/lists/* /var/cache/apt/* && \
     apt-get -qqy update \
