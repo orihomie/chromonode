@@ -1,7 +1,7 @@
 FROM node:12.16.3-slim
 
 ARG CHROME_VERSION="google-chrome-stable"
-ARG FIREFOX_VERSION=76.0
+ARG FIREFOX_VERSION=82.0
 
 RUN rm -rf /var/lib/apt/lists/* /var/cache/apt/* \
     && apt-get -qqy update \
