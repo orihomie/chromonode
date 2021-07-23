@@ -1,5 +1,5 @@
 # chromonode
-Stable chrome along with node v 12.11.1
+Stable chrome along with node v 14.17.1
 
 https://hub.docker.com/repository/docker/0p3xh7/chromonode
 
